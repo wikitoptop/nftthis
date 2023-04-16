@@ -67,54 +67,6 @@ const Create = () => {
   }
   }
 
-  // async function createAuctionListing(contractAddress, tokenId, price) {
-  //   try {
-  //     makeAuctionListing(
-  //       {
-  //         assetContractAddress: contractAddress, // Contract Address of the NFT
-  //         buyoutPricePerToken: price, // Maximum price, the auction will end immediately if a user pays this price.
-  //         currencyContractAddress: NATIVE_TOKEN_ADDRESS, // NATIVE_TOKEN_ADDRESS is the crpyto curency that is native to the network. i.e. Goerli ETH.
-  //         listingDurationInSeconds: 60 * 60 * 24 * 7, // When the auction will be closed and no longer accept bids (1 Week)
-  //         quantity: 1, // How many of the NFTs are being listed (useful for ERC 1155 tokens)
-  //         reservePricePerToken: 0, // Minimum price, users cannot bid below this amount
-  //         startTimestamp: new Date(), // When the listing will start
-  //         tokenId: tokenId, // Token ID of the NFT.
-  //       },
-  //       {
-  //         onSuccess: (tx) => {
-  //           return tx;
-  //         },
-  //       }
-  //     );
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
-
-  // async function createDirectListing(contractAddress, tokenId, price) {
-  //   try {
-  //     makeDirectListing(
-  //       {
-  //         assetContractAddress: contractAddress, // Contract Address of the NFT
-  //         buyoutPricePerToken: price, // Maximum price, the auction will end immediately if a user pays this price.
-  //         currencyContractAddress: NATIVE_TOKEN_ADDRESS, // NATIVE_TOKEN_ADDRESS is the crpyto curency that is native to the network. i.e. Goerli ETH.
-  //         listingDurationInSeconds: 60 * 60 * 24 * 7, // When the auction will be closed and no longer accept bids (1 Week)
-  //         quantity: 1, // How many of the NFTs are being listed (useful for ERC 1155 tokens)
-  //         startTimestamp: new Date(0), // When the listing will start
-  //         tokenId: tokenId, // Token ID of the NFT.
-  //       },
-  //       {
-  //         onSuccess: (tx) => {
-  //           return tx;
-  //         },
-  //       }
-  //     );
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
-
-  // Function to store file in state when user uploads it
   const uploadFile = () => {
     if (fileInputRef?.current) {
       fileInputRef.current.click();
@@ -136,31 +88,6 @@ const Create = () => {
           <h1 className={styles.ourCollection}>
             Upload your NFT to the marketplace:
           </h1>
-
-          {/* Toggle between direct listing and auction listing */}
-          {/* <div className={styles.listingTypeContainer}>
-            <input
-              type="radio"
-              name="listingType"
-              id="directListing"
-              value="directListing"
-              defaultChecked
-              className={styles.listingType}
-            />
-            <label htmlFor="directListing" className={styles.listingTypeLabel}>
-              Direct Listing
-            </label>
-            <input
-              type="radio"
-              name="listingType"
-              id="auctionListing"
-              value="auctionListing"
-              className={styles.listingType}
-            />
-            <label htmlFor="auctionListing" className={styles.listingTypeLabel}>
-              Auction Listing
-            </label>
-          </div> */}
 
           {file ? (
             <img
@@ -206,15 +133,6 @@ const Create = () => {
             placeholder="Description"
             style={{ minWidth: "320px" }}
           />
-
-          {/* Sale Price For Listing Field */}
-          {/* <input
-            type="text"
-            name="price"
-            className={styles.textInput}
-            placeholder="Price (in ETH)"
-            style={{ minWidth: "320px" }}
-          /> */}
 
           <button
             type="submit"
