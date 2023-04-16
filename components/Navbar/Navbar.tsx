@@ -31,7 +31,7 @@ export function Navbar() {
             <Link href="/sell" className={styles.link}>
               Sell
             </Link>
-            <Link href="/sell" className={styles.link}>
+            <Link href="/create" className={styles.link}>
               Create
             </Link>
           </div>
