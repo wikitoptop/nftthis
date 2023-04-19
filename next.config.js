@@ -11,9 +11,4 @@ const nextConfig = {
   basePath: "",
 };
 
-module.exports = {
-  ...nextConfig,
-  images: {
-    unoptimized: true,
-  },
-};
+module.exports = nextConfig;

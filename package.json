@@ -1,7 +1,7 @@
 {
   "name": "nftthis",
-  "version": "0.1.1",
-  "homepage": "https://wikitoptop.github.io/nftthis",
+  "version": "0.1.2",
+  "homepage": "https://vercel.com/wikitoptop/nftthis",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "deploy": "next export"
+    "deploy": "next build && next export && npx thirdweb@latest upload out && npx gh-pages -d build -b main"
   },
   "dependencies": {
     "@thirdweb-dev/chains": "^0.1.2",

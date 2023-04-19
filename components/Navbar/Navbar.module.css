@@ -42,6 +42,13 @@
   gap: 24px;
 }
 
+.imageContainer {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center;
+  margin-bottom: 5px;
+}
+
 .link {
   color: white;
   font-size: 18px;

@@ -43,14 +43,16 @@ export function Navbar() {
           </div>
           {address && (
             <Link className={styles.link} href={`/profile/${address}`}>
-              <Image
-                className={styles.profileImage}
-                src="/user-icon.png"
-                width={43}
-                height={46}
-                style={{ borderRadius: '15%' }}
-                alt="Profile"
-              />
+              <div className={styles.imageContainer}>
+                <Image
+                  className={styles.profileImage}
+                  src="/user-icon.png"
+                  width={45}
+                  height={45}
+                  style={{ borderRadius: '15%' }}
+                  alt="Profile"
+                />
+              </div>
             </Link>
           )}
         </div>
