@@ -31,7 +31,7 @@ export function Navbar() {
             <Link href="/sell" className={styles.link}>
               Sell
             </Link>
-            <Link href="/sell" className={styles.link}>
+            <Link href="/create" className={styles.link}>
               Create
             </Link>
           </div>
@@ -46,8 +46,9 @@ export function Navbar() {
               <Image
                 className={styles.profileImage}
                 src="/user-icon.png"
-                width={42}
-                height={42}
+                width={43}
+                height={46}
+                style={{ borderRadius: '15%' }}
                 alt="Profile"
               />
             </Link>
